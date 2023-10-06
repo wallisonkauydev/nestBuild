@@ -9,7 +9,7 @@ const backendUrl =
     ? "https://talks-app-server.vercel.app/"
     : "http://localhost:3333";
 
-const socket = io(backendUrl);
+const socket = io("https://talks-app-server.vercel.app/");
 
 export default function Home() {
   const [message, setMessage] = useState("");
