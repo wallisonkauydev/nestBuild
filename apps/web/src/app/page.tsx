@@ -4,6 +4,11 @@ import { useEffect, useState } from "react";
 import io from "socket.io-client";
 import { v4 } from "uuid";
 
+const backendUrl =
+  process.env.NODE_ENV === "production"
+    ? "https://talks-app-server.vercel.app/"
+    : "http://localhost:3334";
+
 const socket = io("http://localhost:3334");
 
 export default function Home() {
