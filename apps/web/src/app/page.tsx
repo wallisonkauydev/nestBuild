@@ -7,9 +7,9 @@ import { v4 } from "uuid";
 const backendUrl =
   process.env.NODE_ENV === "production"
     ? "https://talks-app-server.vercel.app/"
-    : "http://localhost:3334";
+    : "http://localhost:3333";
 
-const socket = io("http://localhost:3334");
+const socket = io(backendUrl);
 
 export default function Home() {
   const [message, setMessage] = useState("");
